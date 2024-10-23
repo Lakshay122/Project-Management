@@ -3,9 +3,9 @@ export const dataGridClassNames =
 
 export const dataGridSxStyles = (isDarkMode: boolean) => {
   return {
-    "& .MuiDateGrid-columnHeaders": {
+    "& .MuiDataGrid-columnHeaders": {
       color: `${isDarkMode ? "#e5e7eb" : ""}`,
-      '& [role="row"] ?*': {
+      '& [role="row"] > *': {
         backgroundColor: `${isDarkMode ? "#1d1f21" : "white"}`,
         borderColor: `${isDarkMode ? "#2d3135" : ""}`,
       },
@@ -20,14 +20,13 @@ export const dataGridSxStyles = (isDarkMode: boolean) => {
       color: `${isDarkMode ? "#a3a3a3" : ""}`,
     },
     "& .MuiDataGrid-cell": {
-    //   color: `${isDarkMode ? "#a3a3a3" : ""}`,
-      border:"none"
+      border: "none",
     },
     "& .MuiDataGrid-row": {
-      color: `1px solid ${isDarkMode ? "#2d3135" : "#e5e7eb"}`,
+      borderBottom: `1px solid ${isDarkMode ? "#2d3135" : "e5e7eb"}`,
     },
     "& .MuiDataGrid-withBorderColor": {
-      color: `${isDarkMode ? "#2d3135" : "#e5e7eb"}`,
+      borderColor: `${isDarkMode ? "#2d3135" : "e5e7eb"}`,
     },
   };
 };

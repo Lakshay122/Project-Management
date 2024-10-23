@@ -6,6 +6,9 @@ import helmet from "helmet";
 import morgan from "morgan";
 import projectRoutees from "./routes/projectRoutes";
 import taskRoutes from "./routes/taskRoutes";
+import searchRoutes from "./routes/searchRoutes";
+import userRoutes from "./routes/userRoutes";
+import teamRoutes from "./routes/teamRoutes";
 // Route Imports
 
 // Configurations
@@ -31,8 +34,11 @@ app.get("/", (req, res) => {
 
 app.use("/projects", projectRoutees);
 app.use("/tasks", taskRoutes);
+app.use("/search", searchRoutes);
+app.use("/users", userRoutes);
+app.use("/teams", teamRoutes);
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
+const port = Number(process.env.PORT) || 3000;
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server running on port ${port}`); // log the port where the server is running
 });

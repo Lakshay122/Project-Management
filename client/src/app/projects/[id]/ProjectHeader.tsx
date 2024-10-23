@@ -16,7 +16,7 @@ const ProjectHeader = ({ activeTab, setActiveTab }: Props) => {
 
       <ModalNewProject
         isOpen={isModalNewProjectOpen}
-        onclose={() => setIsModalNewProjectOpen(false)}
+        onClose={() => setIsModalNewProjectOpen(false)}
       />
       <div className="pb-6 pt-6 lg:pb-4 lg:pt-8">
         <Header
